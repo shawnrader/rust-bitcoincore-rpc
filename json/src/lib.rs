@@ -997,6 +997,8 @@ pub struct GetAddressInfoResult {
     pub hd_key_path: Option<bip32::DerivationPath>,
     #[serde(rename = "hdseedid")]
     pub hd_seed_id: Option<bitcoin::hash_types::XpubIdentifier>,
+    #[serde(rename = "hdmasterfingerprint")]
+    pub hd_master_fingerprint: Option<bitcoin::bip32::Fingerprint>,
     pub labels: Vec<GetAddressInfoResultLabel>,
     /// Deprecated in v0.20.0. See `labels` field instead.
     #[deprecated(note = "since Core v0.20.0")]
